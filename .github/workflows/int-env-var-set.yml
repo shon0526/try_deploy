@@ -1,0 +1,9 @@
+name: Intermidiate environment variables
+on: push 
+jobs:
+  print:
+    runs-on: ubuntu-24.04
+    env: 
+      ACTOR: ${{ github.actor }}
+    steps:
+      - run: echo ${ACTOR}
