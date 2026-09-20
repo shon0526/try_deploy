@@ -1,0 +1,11 @@
+name: Environment variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu:24.04
+    env: 
+      BRANCH: main
+    steps:
+      - run: echo "${BRANCH}"
+      - uses: actions/checkout@v4 
+        with: ${{ env.BRANCH }}
