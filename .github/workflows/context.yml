@@ -2,6 +2,6 @@ name: Context
 on: push 
 jobs:
   print:
-    runs-on: ubuntu:24.04
+    runs-on: ubuntu-24.04
     steps:
       - run: echo "${{ github.actor }}"
