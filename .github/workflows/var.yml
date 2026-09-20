@@ -1,0 +1,9 @@
+name: Variables
+on: push 
+jobs:
+  print:
+    runs-on: ubuntu-24.04
+    env:
+      USERNAME: ${{ var.USERNAME }}
+    steps:
+      - run: echo ${USERNAME}
