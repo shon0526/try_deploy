@@ -1,0 +1,8 @@
+name: Conditions
+on: push
+jobs:
+  skip-or-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Hello"
+        if: ${{ contains(github.run_id, '1') }}
