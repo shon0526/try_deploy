@@ -1,0 +1,8 @@
+name: Conditions workflow
+on: push
+jobs:
+  skip-or-run:
+    if: ${{ github.actor == 'shon' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Hello"
